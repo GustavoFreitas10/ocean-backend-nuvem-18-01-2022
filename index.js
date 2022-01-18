@@ -3,6 +3,15 @@ const { MongoClient, ObjectId } = require("mongodb");
 
 const url = "mongodb://localhost:27017";
 const url = "mongodb+srv://guh1:pwL8GboTPxQLJEh0@cluster0.kvjz9.mongodb.net/";
+require("dotenv").config();
+
+const dbUser = process.env.DB_USER;
+const dbPassword = process.env.DB_PASSWORD;
+const dbHost = process.env.DB_HOST;
+const dbName = process.env.DB_NAME;
+
+// const url = "mongodb://localhost:27017";
+const url = `mongodb+srv://${dbUser}:${dbPassword}@${dbHost}`;
 
 const dbName = "ocean_bancodados_18_01_2022";
 
